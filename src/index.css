@@ -80,11 +80,12 @@ body {
   position: relative;
 }
 
-footer.starCount {
+.footer .starCount {
   font-size: 20px;
   font-weight: 600;
   position: absolute;
-  left: 50;
+  /* left: 50; */
+  margin-left: 15px;
 }
 
 .footer .str-btn {
