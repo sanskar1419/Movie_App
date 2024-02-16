@@ -1,9 +1,10 @@
 import MovieList from "./MovieList.js";
+import Navbar from "./Navbar.js";
 
 function App() {
   return (
     <>
-      <h1>Movie Project</h1>
+      <Navbar />
       <MovieList />
     </>
   );
