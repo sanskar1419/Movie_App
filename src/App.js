@@ -1,10 +1,10 @@
-import MovieCard from "./Moviecart.js";
+import MovieList from "./MovieList.js";
 
 function App() {
   return (
     <>
       <h1>Movie Project</h1>
-      <MovieCard />
+      <MovieList />
     </>
   );
 }

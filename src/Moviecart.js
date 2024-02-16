@@ -1,22 +1,7 @@
 import React from "react";
 
 class MovieCard extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      poster_url:
-        "https://cdn.marvel.com/content/1x/avengersendgame_lob_crd_05.jpg",
-      title: "The Avengers",
-      plot: "The grave course of events set in motion by Thanos that wiped out half the universe and fractured the Avengers ranks compels the remaining Avengers to take one final stand in Marvel Studios'grand conclusion to twenty-two films, 'Avengers: Endgame.'",
-      price: 199,
-      rating: 8.9,
-      stars: 0,
-      favourite: false,
-      cart: false,
-    };
-  }
-
-  increaseStars = () => {
+  /*  increaseStars = () => {
     this.setState((prevState) => {
       if (prevState.stars < 5) {
         return {
@@ -24,9 +9,9 @@ class MovieCard extends React.Component {
         };
       }
     });
-  };
+  }; */
 
-  decreaseStars = () => {
+  /*  decreaseStars = () => {
     this.setState((prevState) => {
       if (prevState.stars > 0) {
         return {
@@ -34,23 +19,23 @@ class MovieCard extends React.Component {
         };
       }
     });
-  };
+  }; */
 
-  toggleFavStatus = () => {
+  /*  toggleFavStatus = () => {
     this.setState({
       favourite: !this.state.favourite,
     });
-  };
+  }; */
 
-  toggleCartItem = () => {
+  /* toggleCartItem = () => {
     this.setState({
       cart: !this.state.cart,
     });
-  };
+  }; */
 
   render() {
     const { poster_url, title, plot, price, rating, stars, favourite, cart } =
-      this.state;
+      this.props.movie;
     return (
       <div className="main">
         <div className="movie-card">
@@ -68,7 +53,9 @@ class MovieCard extends React.Component {
                   src="https://cdn-icons-png.flaticon.com/128/43/43625.png"
                   alt="Minus Button"
                   className="str-btn"
-                  onClick={this.decreaseStars}
+                  onClick={() => {
+                    this.props.decStars(this.props.movie);
+                  }}
                 />
                 <img
                   src="https://cdn-icons-png.flaticon.com/128/2107/2107957.png"
@@ -79,20 +66,26 @@ class MovieCard extends React.Component {
                   src="https://cdn-icons-png.flaticon.com/128/748/748113.png"
                   alt="Plus Button"
                   className="str-btn"
-                  onClick={this.increaseStars}
+                  onClick={() => {
+                    this.props.addStars(this.props.movie);
+                  }}
                 />
                 <span className="starCount">{stars}</span>
               </div>
               <button
                 className={favourite ? "unfavourite-btn" : "favourite-btn"}
-                onClick={this.toggleFavStatus}
+                onClick={() => {
+                  this.props.toggleFavStatus(this.props.movie);
+                }}
               >
                 {favourite ? "Un-Favourite" : "Favourite"}
               </button>
 
               <button
                 className={cart ? "remove-cart-btn" : "cart-btn"}
-                onClick={this.toggleCartItem}
+                onClick={() => {
+                  this.props.toggleCartItem(this.props.movie);
+                }}
               >
                 {cart ? "Remove from cart" : "Add to cart"}
               </button>
