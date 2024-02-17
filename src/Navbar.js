@@ -1,9 +1,9 @@
 import React from "react";
-import styled from "styled-components";
 import navbar from "./navbar.module.css";
 
 class Navbar extends React.Component {
   render() {
+    const { cartCount } = this.props;
     return (
       <div className={navbar.nav}>
         <div className={navbar.title}>
@@ -15,7 +15,7 @@ class Navbar extends React.Component {
             alt="Cart-Icon"
             src="https://cdn-icons-png.flaticon.com/128/4290/4290854.png"
           />
-          <span className={navbar.itemCount}>0</span>
+          <span className={navbar.itemCount}>{cartCount}</span>
         </div>
       </div>
     );
