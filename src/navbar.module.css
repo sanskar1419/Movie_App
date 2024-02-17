@@ -1,0 +1,45 @@
+.nav {
+  width: 98.5%;
+  height: 50px;
+  background-image: linear-gradient(45deg, rgb(24, 19, 154), rgb(14, 12, 50));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.title {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+
+.cartImage {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.subtitle {
+  padding: 5px 10px;
+  background-color: #0f0e1f;
+  border-radius: 10px;
+}
+
+.cartContainer {
+  position: relative;
+}
+
+.itemCount {
+  position: absolute;
+  background-color: yellow;
+  border-radius: 50%;
+  right: 0.5px;
+  top: -5px;
+  font-size: 0.8rem;
+  padding: 0 7px;
+  text-align: center;
+  vertical-align: center;
+  margin-bottom: 5px;
+  font-weight: 700;
+}

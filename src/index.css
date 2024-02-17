@@ -15,12 +15,14 @@ body {
   box-sizing: border-box;
 }
 .movie-card {
-  background: #fff;
+  background: linear-gradient(45deg, rgb(29, 27, 81), rgb(14, 12, 50));
   padding: 0;
   border: none;
   border-radius: 10px;
   /* box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #f1f1f1; */
   display: flex;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
+  color: white;
 }
 .movie-card:not(:first-child) {
   margin-top: 20px;
@@ -53,7 +55,8 @@ body {
   margin-top: 20px;
   padding: 0 20px;
   font-weight: 500;
-  color: rgb(0, 75, 0);
+  /* color: rgb(0, 75, 0); */
+  color: white;
 }
 .footer {
   position: absolute;
@@ -68,6 +71,7 @@ body {
   font-size: 20px;
   font-weight: 600;
   flex: 1;
+  color: white;
 }
 
 .footer .stars {
